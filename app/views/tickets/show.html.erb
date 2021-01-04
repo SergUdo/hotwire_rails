@@ -1,0 +1,13 @@
+<h1><%= @ticket.title %></h1>
+
+<p><%= @ticket.content %></p>
+
+<%= link_to 'Edit', edit_ticket_path(@ticket) %> |
+<%= link_to 'Back', tickets_path %>
+
+<div id="comments">
+  <h2>Comments</h2>
+  <%= render @ticket.comments%>
+</div>
+
+<%= link_to "New Comment", new_ticket_comment_path(@ticket) %>
